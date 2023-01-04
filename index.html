@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+</head>
+<body>
+  <main>
+    <article class="nft">
+      <picture class="nft__img">
+          <img src="images/image-equilibrium.jpg" alt="Equilibrium">
+          <div class="img-overlay">
+            <img src="images/icon-view.svg" alt="Eye icon">
+          </div>
+        </div>
+      </picture>
+      <div class="nft__content">
+        <h1 class="nft__name">
+          Equilibrium #3429
+        </h1>
+
+        <p class="nft__description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+
+        <div class="flex-group">
+          <div class="nft__value">
+            <img src="images/icon-ethereum.svg" alt="Ethereum Icon">
+            <p class="nft__value-eth">
+              0.041 ETH
+            </p>
+          </div>
+
+          <div class="nft__time">
+            <img src="images/icon-clock.svg" alt="Time left icon">
+            <p class="nft_time-left">
+              3 days left
+            </p>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="nft__creation"
+        data-icon="image-avatar">
+          <img src="images/image-avatar.png" alt="Jules Wyvern">
+          <p class="created">
+            Creation of <span>Jules Wyvern</span>
+          </p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">DuJokic</a>.
+  </div>
+</body>
+</html>

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --clr-primary-200: hsl(215, 51%, 70%);
+    --clr-primary-400: hsl(178, 100%, 50%);
+
+    --clr-neutral-900: hsl(217, 54%, 11%);
+    --clr-neutral-800: hsl(216, 50%, 16%);
+    --clr-neutral-700: hsl(215, 32%, 18%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --clr-overlay-400: hsla(178, 100%, 50%, 50%);
+
+    --clr-line-700: hsl(215, 32%, 27%);
+
+    --ff: 'Outfit', serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.attribution {
+    font-size: 14px; text-align: center;
+    color: var(--clr-neutral-100);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* general styling */
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--clr-neutral-900);
+    margin: 1.42rem;
+    font-size: 18px;
+}
+
+/* utility styles */
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.2rem;
+}
+/* nft styles */
+
+.nft {
+    display: grid;
+    background-color: var(--clr-neutral-800);
+    padding: 1.5rem;
+    border-radius: 0.825rem;
+    overflow: hidden;
+    max-width: 330px;
+}
+
+.nft .nft__img img {
+  border-radius: 0.5rem;
+}
+
+.nft .nft__img {
+  position: relative;
+}
+
+.nft .nft__img div {
+  position: absolute;
+  background-color: var(--clr-overlay-400);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  border-radius: 0.825rem;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nft .nft__img div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nft .nft__img div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nft__content {
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.nft__name {
+  font-family: var(--ff);
+  font-weight: var(--fw-semi-bold);
+  font-size: 1.4rem;
+  color: var(--clr-neutral-100);
+}
+
+.nft__name:hover {
+  cursor: pointer;
+  color: var(--clr-primary-400);
+}
+
+.nft__description {
+  font-family: var(--ff);
+  font-weight: var(--fw-light);
+  font-size: 1rem;
+  color: var(--clr-primary-200);
+}
+
+.nft__value {
+  display: flex;
+  align-items: center;
+  gap: 0.425rem;
+}
+
+.nft__time {
+  display: flex;
+  align-items: center;
+  gap: 0.425rem;
+}
+
+.nft__value-eth {
+  font-family: var(--ff);
+  font-weight: var(--fw-semi-bold);
+  font-size: 1rem;
+  color: var(--clr-primary-400);
+}
+
+.nft__time {
+  font-family: var(--ff);
+  font-weight: var(--fw-light);
+  font-size: 1rem;
+  color: var(--clr-primary-200);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--clr-line-700);
+  height: 0;
+  padding-bottom: 0.5rem;
+}
+
+.created {
+  font-family: var(--ff);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  color: var(--clr-primary-200);
+}
+
+.created span {
+  font-family: var(--ff);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  color: var(--clr-neutral-100);
+}
+
+.created span:hover {
+  cursor: pointer;
+  color: var(--clr-primary-400);
+}
+.nft__creation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nft__creation img {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid white;
+  border-radius: 100%;
+}
